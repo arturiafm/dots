@@ -1,0 +1,22 @@
+[commit]
+    gpgsign = true
+
+[init]
+    defaultBranch = master
+
+[submodule]
+    recurse = true
+
+[user]
+    email = arturiafm@pm.me
+    name = arturiafm
+    signingkey = EFDC8A935088EFC6DC2F2612E0F62A86F50941B9
+
+[url "git@codeberg.org:"]
+    insteadOf = "cb:"
+
+[url "git@github.com:"]
+    insteadOf = "gh:"
+
+[url "git@gitlab.com:"]
+    insteadOf = "gl:"
