@@ -16,6 +16,7 @@ app-editors/emacs        dynamic-loading gtk gui harfbuzz xft
 app-emacs/emacs-common   gui
 app-text/xmlto           text
 media-libs/freetype      harfbuzz
+media-sound/mpd          pipewire
 media-video/pipewire     alsa extra ffmpeg jack-sdk pipewire-alsa pulseaudio
 media-video/pipewire     sound-server
 sys-kernel/installkernel dracut efistub
