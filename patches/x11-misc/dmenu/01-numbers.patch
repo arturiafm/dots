@@ -4,23 +4,20 @@ Date: Sat, 10 Aug 2019 17:20:08 -0500
 Subject: [PATCH] Display number of matched and total items in top right corner
 
 ---
- dmenu.c | 25 +++++++++++++++++++++++--
- 1 file changed, 23 insertions(+), 2 deletions(-)
-
 diff --git a/dmenu.c b/dmenu.c
-index 6b8f51b..98c5810 100644
+index fd49549..5898230 100644
 --- a/dmenu.c
 +++ b/dmenu.c
-@@ -24,6 +24,8 @@
+@@ -23,6 +23,8 @@
+ #define INTERSECT(x,y,w,h,r)  (MAX(0, MIN((x)+(w),(r).x_org+(r).width)  - MAX((x),(r).x_org)) \
                               * MAX(0, MIN((y)+(h),(r).y_org+(r).height) - MAX((y),(r).y_org)))
- #define LENGTH(X)             (sizeof X / sizeof X[0])
  #define TEXTW(X)              (drw_fontset_getwidth(drw, (X)) + lrpad)
 +#define NUMBERSMAXDIGITS      100
 +#define NUMBERSBUFSIZE        (NUMBERSMAXDIGITS * 2) + 1
  
  /* enums */
  enum { SchemeNorm, SchemeSel, SchemeOut, SchemeLast }; /* color schemes */
-@@ -34,6 +36,7 @@ struct item {
+@@ -33,6 +35,7 @@ struct item {
  	int out;
  };
  
@@ -28,7 +25,7 @@ index 6b8f51b..98c5810 100644
  static char text[BUFSIZ] = "";
  static char *embed;
  static int bh, mw, mh;
-@@ -126,6 +129,21 @@ drawitem(struct item *item, int x, int y, int w)
+@@ -142,6 +145,21 @@ drawitem(struct item *item, int x, int y, int w)
  	return drw_text(drw, x, y, w, bh, lrpad / 2, item->text, 0);
  }
  
@@ -50,7 +47,7 @@ index 6b8f51b..98c5810 100644
  static void
  drawmenu(void)
  {
-@@ -151,6 +169,7 @@ drawmenu(void)
+@@ -167,6 +185,7 @@ drawmenu(void)
  		drw_rect(drw, x + curpos, 2, 2, bh - 4, 1, 0);
  	}
  
@@ -58,7 +55,7 @@ index 6b8f51b..98c5810 100644
  	if (lines > 0) {
  		/* draw vertical list */
  		for (item = curr; item != next; item = item->right)
-@@ -165,13 +184,15 @@ drawmenu(void)
+@@ -181,12 +200,14 @@ drawmenu(void)
  		}
  		x += w;
  		for (item = curr; item != next; item = item->right)
@@ -75,6 +72,3 @@ index 6b8f51b..98c5810 100644
 +	drw_text(drw, mw - TEXTW(numbers), 0, TEXTW(numbers), bh, lrpad / 2, numbers, 0);
  	drw_map(drw, win, 0, 0, mw, mh);
  }
- 
--- 
-2.19.2

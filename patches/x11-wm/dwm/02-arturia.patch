@@ -1,5 +1,6 @@
+
 diff --git a/config.def.h b/config.def.h
-index 81c3fc0..09a5c1b 100644
+index 81c3fc0..8ffada1 100644
 --- a/config.def.h
 +++ b/config.def.h
 @@ -5,13 +5,13 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
@@ -48,12 +49,23 @@ index 81c3fc0..09a5c1b 100644
  
  /* helper for spawning shell commands in the pre dwm-5.0 fashion */
  #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
-@@ -63,29 +61,16 @@ static const char *termcmd[]  = { "st", NULL };
+@@ -59,33 +57,26 @@ static const Layout layouts[] = {
+ /* commands */
+ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
+ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+-static const char *termcmd[]  = { "st", NULL };
++static const char *termcmd[]  = { "alacritty", NULL };
++static const char *volup[] = { "wpctl", "set-volume", "@DEFAULT_SINK@", "1%+", NULL };
++static const char *voldown[] = { "wpctl", "set-volume", "@DEFAULT_SINK@", "1%-", NULL };
++static const char *volmute[] = { "wpctl", "set-mute", "@DEFAULT_SINK@", "toggle", NULL };
  
  static const Key keys[] = {
  	/* modifier                     key        function        argument */
 -	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 -	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
++	{ 0,                            0x1008ff11, spawn,         {.v = voldown } },
++	{ 0,                            0x1008ff12, spawn,         {.v = volmute } },
++	{ 0,                            0x1008ff13, spawn,         {.v = volup } },
 +	{ MODKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
 +	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
  	{ MODKEY,                       XK_b,      togglebar,      {0} },
@@ -84,7 +96,7 @@ index 81c3fc0..09a5c1b 100644
  	TAGKEYS(                        XK_1,                      0)
  	TAGKEYS(                        XK_2,                      1)
  	TAGKEYS(                        XK_3,                      2)
-@@ -95,23 +80,18 @@ static const Key keys[] = {
+@@ -95,23 +86,18 @@ static const Key keys[] = {
  	TAGKEYS(                        XK_7,                      6)
  	TAGKEYS(                        XK_8,                      7)
  	TAGKEYS(                        XK_9,                      8)
