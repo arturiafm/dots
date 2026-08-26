@@ -1,6 +1,6 @@
 .PHONY: all home patches system portage system
 
-all: home patches portage system
+all: home
 
 home:
 	stow -R -t $(HOME) home
