@@ -3,7 +3,9 @@
 
 app-shells/zoxide          ~amd64
 dev-lang/deno-bin          ~amd64
+dev-util/clion             ~amd64
 dev-util/intellij-idea     ~amd64
+media-video/obs-studio     ~amd64
 x11-drivers/nvidia-drivers ~amd64
 
 # steam

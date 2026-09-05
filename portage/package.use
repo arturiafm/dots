@@ -7,7 +7,7 @@
 
 # gpu
 */* VIDEO_CARDS: -* intel nvidia
-*/* nvidia vdpau nvenc
+*/* vaapi nvidia nvenc vdpau
 x11-drivers/nvidia-drivers modules-sign
 
 # system
@@ -15,8 +15,12 @@ app-admin/doas           persist
 app-editors/emacs        dynamic-loading gtk gui harfbuzz xft
 app-emacs/emacs-common   gui
 app-text/xmlto           text
+dev-util/vulkan-tools    cube
 media-libs/freetype      harfbuzz
+media-libs/harfbuzz      icu
 media-sound/mpd          pipewire
+media-video/ffmpeg       opus x264 x265
+media-video/obs-studio   pulseaudio
 media-video/pipewire     alsa extra ffmpeg jack-sdk pipewire-alsa pulseaudio
 media-video/pipewire     sound-server
 sys-kernel/installkernel dracut efistub
