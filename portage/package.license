@@ -1,4 +1,5 @@
 dev-util/clion            IDEA
 dev-util/intellij-idea    codehaus-classworlds
+games-emulation/dolphin   FatFs
 games-util/steam-launcher ValveSteamLicense
 net-im/discord            all-rights-reserved
