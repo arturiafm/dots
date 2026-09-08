@@ -1,10 +1,13 @@
 # system
 =sys-kernel/gentoo-sources-7.1.7 ~amd64
 
+app-admin/keepassxc        ~amd64
 app-shells/zoxide          ~amd64
 dev-lang/deno-bin          ~amd64
+dev-libs/protobuf          ~amd64
 dev-util/clion             ~amd64
 dev-util/intellij-idea     ~amd64
+games-emulation/rpcs3      ~amd64
 media-video/obs-studio     ~amd64
 x11-drivers/nvidia-drivers ~amd64
 
