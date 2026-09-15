@@ -1,0 +1,4 @@
+LABEL=boot              /efi            vfat            umask=077,tz=UTC        0 2
+LABEL=root              /               xfs             defaults,noatime        0 1
+LABEL=home              /home           xfs             defaults,noatime        0 2
+LABEL=swap              none            swap            sw                      0 0
