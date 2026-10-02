@@ -1,8 +1,7 @@
 # cpu
-*/* CPU_FLAGS_X86: aes avx avx2 avx512_bitalg avx512_vbmi2 avx512_vnni
-*/* CPU_FLAGS_X86: avx512_vp2intersect avx512_vpopcntdq avx512bw avx512cd
-*/* CPU_FLAGS_X86: avx512dq avx512f avx512ifma avx512vbmi avx512vl bmi1 bmi2
-*/* CPU_FLAGS_X86: f16c fma3 mmx mmxext pclmul popcnt rdrand sha sse sse2 sse3
+*/* CPU_FLAGS_X86: aes avx avx2 avx512_bitalg avx512_vbmi2 avx512_vnni avx512_vp2intersect
+*/* CPU_FLAGS_X86: avx512_vpopcntdq avx512bw avx512cd avx512dq avx512f avx512ifma avx512vbmi
+*/* CPU_FLAGS_X86: avx512vl bmi1 bmi2 f16c fma3 mmx mmxext pclmul popcnt rdrand sha sse sse2 sse3
 */* CPU_FLAGS_X86: sse4_1 sse4_2 ssse3 vpclmulqdq
 
 # gpu
@@ -12,19 +11,13 @@ x11-drivers/nvidia-drivers modules-sign
 
 # system
 app-admin/doas           persist
-app-editors/emacs        dynamic-loading gtk gui harfbuzz xft
-app-emacs/emacs-common   gui
-app-text/xmlto           text
+app-text/xmlto           text # xdg-utils depencendy
 dev-util/vulkan-tools    cube
-media-libs/freetype      harfbuzz
-media-libs/harfbuzz      icu
-media-sound/mpd          pipewire
+media-sound/mpd          flac opus pipewire
 media-video/ffmpeg       opus x264 x265
-media-video/obs-studio   pulseaudio
-media-video/pipewire     alsa extra ffmpeg jack-sdk pipewire-alsa pulseaudio
-media-video/pipewire     sound-server
+media-video/obs-studio   pulseaudio screencast
+media-video/pipewire     alsa extra ffmpeg jack-sdk pipewire-alsa pulseaudio sound-server
 sys-kernel/installkernel dracut efistub
-sys-libs/zlib            minizip
 
 # steam
 app-accessibility/at-spi2-core    abi_x86_32
