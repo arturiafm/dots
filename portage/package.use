@@ -13,11 +13,13 @@ x11-drivers/nvidia-drivers modules-sign
 app-admin/doas           persist
 app-text/xmlto           text # xdg-utils depencendy
 dev-util/vulkan-tools    cube
+media-libs/freetype      harfbuzz # pango dependency
 media-sound/mpd          flac opus pipewire
 media-video/ffmpeg       opus x264 x265
 media-video/obs-studio   pulseaudio screencast
 media-video/pipewire     alsa extra ffmpeg jack-sdk pipewire-alsa pulseaudio sound-server
 sys-kernel/installkernel dracut efistub
+sys-libs/zlib            minizip # keepassxc dependency
 
 # steam
 app-accessibility/at-spi2-core    abi_x86_32
