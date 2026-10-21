@@ -1,5 +1,5 @@
 # system
-=sys-kernel/gentoo-sources-7.2.9 ~amd64
+=sys-kernel/gentoo-sources-7.3.0 ~amd64
 
 app-admin/keepassxc        ~amd64
 app-editors/neovim         ~amd64
