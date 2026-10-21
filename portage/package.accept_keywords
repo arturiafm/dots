@@ -1,0 +1,22 @@
+# system
+=sys-kernel/gentoo-sources-7.2.9 ~amd64
+
+app-admin/keepassxc        ~amd64
+app-editors/neovim         ~amd64
+app-shells/zoxide          ~amd64
+dev-libs/protobuf          ~amd64 # rpcs3 dependency
+dev-lua/luv                ~amd64 # neovim dependency
+media-video/obs-studio     ~amd64
+net-misc/sunshine          ~amd64
+x11-drivers/nvidia-drivers ~amd64
+
+# guru
+=games-emulation/rpcs3-9999 **
+games-emulation/azahar      ~amd64
+games-emulation/shadPS4     ~amd64
+games-util/protonup         ~amd64
+
+# steam
+*/*::steam-overlay                ~amd64
+games-util/game-device-udev-rules ~amd64
+sys-libs/libudev-compat           ~amd64
