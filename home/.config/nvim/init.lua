@@ -4,11 +4,12 @@ local o = vim.opt
 g.mapleader = " "
 g.maplocalleader = " "
 
+o.autocomplete = true
 o.clipboard = "unnamedplus"
 o.colorcolumn = { 100 }
 o.expandtab = true
-o.shiftwidth = 2
-o.tabstop = 2
+o.shiftwidth = 4
+o.tabstop = 4
 o.ignorecase = true
 o.smartcase = true
 o.mouse = ""
