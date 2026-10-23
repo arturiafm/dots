@@ -13,6 +13,7 @@ app-admin/doas             persist
 app-emulation/qemu         spice usbredir virtfs
 app-emulation/virt-manager gui
 app-text/xmlto             text # xdg-utils dependency
+dev-lang/rust-bin          rust-analyzer
 dev-util/vulkan-tools      cube
 media-libs/freetype        harfbuzz # pango dependency
 media-sound/mpd            flac opus
