@@ -6,6 +6,9 @@ fish_vi_key_bindings
 
 set -u fish_greeting
 
+set -x CARGO_HOME ~/.local/share/cargo
+set -x GOPATH ~/.local/share/go
+
 alias mv "mv -v"
 alias cp "cp -rv"
 alias rm "rm -rv"
