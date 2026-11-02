@@ -15,3 +15,4 @@ system:
 	install -m 0600 system/doas.conf /etc/doas.conf
 	install -m 0644 system/rc.conf   /etc/rc.conf
 	install -m 0644 system/kernel.config /usr/src/linux/.config
+	install -m 0600 system/nftables.conf /var/lib/nftables/rules-save
