@@ -44,6 +44,14 @@ require("neo-tree").setup({
     filtered_items = {
       hide_dotfiles = false,
       hide_gitignored = false,
+      hide_by_name = { ".git" },
+      show_hidden_count = false,
+    },
+  },
+  nesting_rules = {
+    ["go.mod"] = {
+      pattern = "^go%.mod$",
+      files = { "go.sum" },
     },
   },
   window = {
