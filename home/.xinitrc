@@ -1,5 +1,10 @@
 #!/bin/sh
 
+while true; do
+    xsetroot -name "$(date '+ %Y-%m-%d %X ')"
+    sleep 1
+done &
+
 setxkbmap -layout us -variant colemak_dh -option ctrl:nocaps
 xwallpaper --zoom "$(find ~/wallpapers -type f | shuf -n 1)"
 
