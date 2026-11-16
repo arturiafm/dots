@@ -10,12 +10,16 @@
 
 # system
 app-admin/doas             persist
+app-editors/emacs          gtk gui harfbuzz tree-sitter
+app-emacs/emacs-common     gui
 app-emulation/qemu         spice usbredir virtfs
 app-emulation/virt-manager gui
 app-text/xmlto             text # xdg-utils dependency
 dev-lang/rust-bin          rust-analyzer
+dev-qt/qtdeclarative       svg # moonlight dependency
 dev-util/vulkan-tools      cube
 media-libs/freetype        harfbuzz # pango dependency
+media-libs/libsdl2         kms gles2 # moonlight dependency
 media-sound/mpd            flac opus
 media-video/ffmpeg         opus x264 x265
 media-video/obs-studio     pulseaudio screencast
