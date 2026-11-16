@@ -1,7 +1,7 @@
 #!/bin/sh
 
 while true; do
-    xsetroot -name "$(date '+ %Y-%m-%d %X ')"
+    xsetroot -name " $(date '+%Y-%m-%d %X') | $(cat /sys/class/power_supply/BAT1/capacity)% "
     sleep 1
 done &
 
