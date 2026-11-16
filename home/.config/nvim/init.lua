@@ -80,6 +80,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
     vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
     vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
+
+    local client_id = args.data.client_id
+    vim.lsp.completion.enable(true, client_id, args.buf, { autotrigger = true })
   end,
 })
 
