@@ -10,7 +10,7 @@
 
 # system
 app-admin/doas             persist
-app-editors/emacs          gtk gui harfbuzz tree-sitter
+app-editors/emacs          gtk gui harfbuzz png sqlite svg tree-sitter
 app-emacs/emacs-common     gui
 app-emulation/qemu         spice usbredir virtfs
 app-emulation/virt-manager gui

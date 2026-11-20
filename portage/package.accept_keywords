@@ -1,15 +1,16 @@
 # system
 =sys-kernel/gentoo-sources-7.3.0 ~amd64
 
-app-admin/keepassxc        ~amd64
-app-editors/neovim         ~amd64
-app-shells/zoxide          ~amd64
-dev-libs/protobuf          ~amd64 # rpcs3 dependency
-dev-lua/luv                ~amd64 # neovim dependency
-media-video/obs-studio     ~amd64
-net-misc/moonlight         ~amd64
-net-misc/sunshine          ~amd64
-x11-drivers/nvidia-drivers ~amd64
+app-admin/keepassxc                 ~amd64
+app-editors/neovim                  ~amd64
+app-shells/zoxide                   ~amd64
+dev-libs/protobuf                   ~amd64 # rpcs3 dependency
+dev-lua/luv                         ~amd64 # neovim dependency
+dev-util/typescript-language-server ~amd64
+media-video/obs-studio              ~amd64
+net-misc/moonlight                  ~amd64
+net-misc/sunshine                   ~amd64
+x11-drivers/nvidia-drivers          ~amd64
 
 # guru
 =games-emulation/rpcs3-9999 **
